@@ -1,4 +1,4 @@
-import index.css;
+import "index.css";
 
 const userData = [
   {"fname":"esme", "lname":"sanchez", "id":1892038, "isTherapist":true},
@@ -8,17 +8,17 @@ const userData = [
   {"fname":"bettino", "lname":"yang", "id":3789204, "isTherapist":true}
 ]
 
-const allUsers = document.querySelector('#allUsers');
-
-const upperCase = (word) => {
-  return word.charAt(0).toUpperCase() + string.slice(1);
-}
-
 const showUsers = () => {
   allUsers.innerHTML = '';
   userData.forEach(user => {
-    <section class="user">
-      <p>${upperCase(user.lname)},${upperCase(user.fname)}</p>
-    </section>
+    allUsers.innerHTML += `<section class="user"> <p>${upperCase(user.lname)},${upperCase(user.fname)}</p> </section>`
   })
+}
+
+const allUsers = document.querySelector('#allUsers');
+
+window.addEventListener('load', showUsers);
+
+const upperCase = (word) => {
+  return word.charAt(0).toUpperCase() + word.slice(1);
 }
