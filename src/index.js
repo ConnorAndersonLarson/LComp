@@ -1,5 +1,3 @@
-import "index.css";
-
 const userData = [
   {"fname":"esme", "lname":"sanchez", "id":1892038, "isTherapist":true},
   {"fname":"rick", "lname":"jeps", "id":1894024, "isTherapist":false},
@@ -11,7 +9,7 @@ const userData = [
 const showUsers = () => {
   allUsers.innerHTML = '';
   userData.forEach(user => {
-    allUsers.innerHTML += `<section class="user"> <p>${upperCase(user.lname)},${upperCase(user.fname)}</p> </section>`
+    allUsers.innerHTML += `<section class="user"> <p>${upperCase(user.lname)}, ${upperCase(user.fname)}</p> </section>`
   })
 }
 
