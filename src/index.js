@@ -9,7 +9,7 @@ const userData = [
 const showUsers = () => {
   allUsers.innerHTML = '';
   userData.forEach(user => {
-    allUsers.innerHTML += `<section class="user" tabindex=0> <p>${upperCase(user.lname)}, ${upperCase(user.fname)}</p> </section>`
+    allUsers.innerHTML += `<section class="user" tabindex=0 id=${user.id}> <p>${upperCase(user.lname)}, ${upperCase(user.fname)}</p> </section>`
   })
 }
 
